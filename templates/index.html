@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RAG Chatbot – Insurance Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>🛡️ Insurance RAG Chatbot</h1>
+            <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+        </div>
+
+        <form method="POST" class="chat-form">
+            <textarea name="question" rows="4" placeholder="Ask a question..." required>{{ question }}</textarea>
+            <button type="submit">💬 Ask</button>
+        </form>
+
+        <div class="chat-history">
+            {% if question %}
+                <div class="chat-bubble user">👤 {{ question }}</div>
+            {% endif %}
+            {% if answer %}
+                <div class="chat-bubble bot">🤖 {{ answer }}</div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
