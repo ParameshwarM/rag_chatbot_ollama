@@ -1,0 +1,8 @@
+Flask
+faiss-cpu
+sentence-transformers
+python-docx
+PyMuPDF
+PyMuPDF
+docx
+sentence_transformers
